@@ -125,7 +125,7 @@ export function useSimulation() {
         }
 
         // Human detection near cutting area
-        if (id === "cutting" && Math.random() < 0.12) {
+        if (id === "cutting" && Math.random() < 0.05) {
           updateStage(id, { status: "error", progress: 60, detail: "HUMANO DETECTADO!" });
           setState((prev) => ({ ...prev, humanDetected: true, isRunning: false }));
           addLog("🚨 ALERTA: Presença humana detectada na área de corte! Operação interrompida imediatamente!", "error");
