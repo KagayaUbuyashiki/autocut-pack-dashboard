@@ -117,7 +117,7 @@ export function useSimulation() {
         }
 
         // Random error chance (~8%)
-        if (Math.random() < 0.08 && id !== "storage") {
+        if (Math.random() < 0.03 && id !== "storage") {
           updateStage(id, { status: "error", progress: 100, detail: "Falha detectada!" });
           addLog(`❌ Erro na etapa: ${stage.name} - Falha no sensor`, "error");
           setState((prev) => ({ ...prev, isRunning: false }));
